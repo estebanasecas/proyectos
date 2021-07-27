@@ -6,17 +6,13 @@ import random
 # Who pay less is a contributor but does not have acces to the rafle.
 # Who doesnt't pay nothing is not a contributor and nor does not have acces to the rafle.
 
-print '\n****************'
-print '*Rafle\'s winner* '
-print '****************'
+#--------------------------------------------------------------------------------------------------------------------- functions
 
-database = {}
-
-for i in range(0, 10):  # here database until 10 people         This for
-                                                              #         - take input data
-    name = raw_input('\nName: ')                              #         - change data type (Paid) str > int
-                                                              #         - actualiize database
-    paid = raw_input('Paid: $ ')
+def add_new_person():                                         #         This function
+                                                              
+    name = input('\nName: ')                                  #         - take input data
+                                                              #         - change data type (paid) str > int
+    paid = input('Paid: $ ')                                  #         - actualiize database
 
     while paid == str(paid) :
 
@@ -26,13 +22,37 @@ for i in range(0, 10):  # here database until 10 people         This for
 
         except ValueError:
 
-            print "Must put integer number."
-            paid = raw_input('Has paid: $') 
+            print("Must put integer number.")
+            paid = input('Has paid: $') 
 
     database[name] = paid
 
+#-----------------------------------------------------------------------------------------------------------------------------
 
-print '\nActualized database: ', database 
+
+print('\n****************')
+print('*Rafle\'s winner* ')
+print('****************')
+
+database = {}                                                             
+
+add_new_person()        
+
+while True:
+
+    another_person = input("Do you register another person?(s/n) ")
+
+    if another_person == 's':
+        add_new_person()  
+
+    elif another_person == 'n':
+        break
+
+    else:
+        print("Wrong answer.\n")
+
+    
+print("\nActualized database: %r - %r participants -" % (database, len(database)))
 
 
 participants = {}      # create a sub-dict                                                    
@@ -64,11 +84,11 @@ for i in database:                                            # This for
         number_none += 1
 
 
-print '\nParticipants: ', participants, '- %d participants -' % number_participants
-print 'Contributors: ', contributors, '- %d contributors -' % number_contributors
-print 'none: ', none, '- %d none -' % number_none
+print('\nParticipants: ', participants, '- %d participants -' % number_participants)
+print('Contributors: ', contributors, '- %d contributors -' % number_contributors)
+print('None: ', none, '- %d none -' % number_none)
 
-print '\nCollected money: $ ', collected_money
+print('\nCollected money: $ ', collected_money)
 
 
 number = 0
@@ -78,29 +98,20 @@ for name in participants:                                     # This for
     participants[name] = number
 
 
-print '\nAssignement_numbers', participants
+print('\nAssignement_numbers', participants)
 
 random_number = random.randint(1, number)
 
-print '\nThe winner number is ', random_number
+print('\nThe winner number is ', random_number)
 
 
 for i in participants:                                        # This for
                                                               #         - determines who win the rafle 
     if random_number == participants[i]:
 
-        print '\n********************' 
-        print 'The winner is ', i
-        print '********************' 
-
-
-
-
-
-
-
-
-
+        print('\n********************') 
+        print('The winner is ', i)
+        print('********************') 
 
 
 
