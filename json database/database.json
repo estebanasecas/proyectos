@@ -1,0 +1,28 @@
+{
+    
+    "1.Name":"Juan",
+    "1.Lastname":"Ramirez",
+    "1.Telephone":"1111 1111",
+    "1.Children":["Carla", "Beto", "Silvia"],  
+
+    "2.Name":"Marta",
+    "2.Lastname":"Del Paso",
+    "2.Telephone":"2222 2222",
+    "2.Children":["Lalo", "Roke"],    
+   
+    "3.Name":"Martin",
+    "3.Lastname":"Garcia",
+    "3.Telephone":"3333 3333",
+    "3.Children":"No tiene",
+
+    "4.Name":"Roman",
+    "4.Lastname":"Riquelme",
+    "4.Telephone":"4444 4444",
+    "4.Children":["Luisa", "Venicio"],
+
+    "5.Name":"Maru",
+    "5.Lastname":"Botana",
+    "5.Telephone":"5555 5555",
+    "5.Children":["Teodoro", "Teodolo", "Tiburcio","Nicanor", "Celso", "Epifanio"]
+
+}
