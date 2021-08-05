@@ -1,6 +1,5 @@
+# This script read and modify a json database file
 import json
-
-# This script read and update a json database file
 
 with open("database.json") as clients:
 
@@ -77,9 +76,9 @@ if update == 's':
     print("Total clients: ", len(database)// 4)
 
 
-    with open("database_updated.json", 'w') as exemple:
+    with open("database_updated.json", 'w') as update:
 
-        json.dump(database, exemple)
+        json.dump(database, update)
 
 else :
     exit(0)
